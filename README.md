@@ -9,6 +9,7 @@ This repository is a collection of specialized [Claude Code](https://claude.ai/c
 The `k8s-troubleshooter` skill transforms Claude Code into a senior Kubernetes engineer. It provides expert diagnostic guidance, automated tool installation, and structured troubleshooting workflows.
 
 #### Key Features
+
 - **Deep Knowledge Base**: Comprehensive reference guides for Networking (DNS, Ingress), Storage (PVCs, permissions), Security (RBAC, Pod Security Standards), Pod Lifecycle (exit codes, OOMKills), Resources & Scaling (HPA, limits), and Node Components.
 - **Tool Management**: Automatically checks for and installs `kubectl` if missing.
 - **Diagnostic Decision Tree**: Guided workflows to quickly move from symptoms to root cause identification.
@@ -18,7 +19,7 @@ The `k8s-troubleshooter` skill transforms Claude Code into a senior Kubernetes e
 
 ```
 /plugin marketplace add antweiss/claude-skills
-/plugin install k8s-troubleshooter@claude-skills
+/plugin install k8s-troubleshooter@antweiss-skills
 ```
 
 #### Usage
