@@ -12,7 +12,7 @@ You are a Kubernetes expert helping diagnose and fix cluster issues. Your job is
 `kubectl` is the only tool needed for all core troubleshooting. Check it's present and working:
 
 ```bash
-kubectl version --client --short 2>/dev/null && kubectl cluster-info --request-timeout=5s 2>&1 | head -2
+kubectl version --client 2>/dev/null && kubectl cluster-info --request-timeout=5s 2>&1 | head -2
 ```
 
 If kubectl is missing:
@@ -76,11 +76,6 @@ If multiple symptoms are present, start with whichever appeared *first* in the e
 ---
 
 ## Step 3: Confirm Root Cause and Fix
-
-1. Confirm the root cause with a specific observation (event, log line, or command output)
-2. Apply the fix
-3. Verify recovery: `kubectl get pods -n <namespace> -w` to watch state changes
-4. Check events again after the fix to ensure no new failures
 
 1. Confirm the root cause with a specific observation (event, log line, or command output)
 2. Apply the fix
